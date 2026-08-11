@@ -1,0 +1,14 @@
+*:root{
+  --background: #08252D;
+  --navbar: #064C58;
+  --color-text-primary: #7FDEE2;
+  --color-text-second: #DFFBCA;
+  --color-button: #74CD59;
+  --text-title: "Fredericka the Great", serif;
+  --text: "Bricolage Grotesque", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
