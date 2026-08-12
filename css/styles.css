@@ -313,51 +313,6 @@ h3 {
   font-family: var(--text) !important;
   font-weight: bold !important;
 }
-
-@media (min-width: 768px) {
-  .barra-navegacion .contenedor {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .descripcion {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .descripcion>div {
-    flex: 1;
-    /* El texto toma el 50% */
-  }
-
-  .descripcion img {
-    flex: 1;
-    /* La imagen toma el otro 50% */
-    width: 50%;
-    max-height: 350px;
-    /* Mantiene la imagen proporcionada y alineada */
-  }
-
-  .formulario .fila {
-    flex-direction: row;
-  }
-
-  .formulario .fila .grupo {
-    flex: 1;
-  }
-
-  #enviarButton {
-    width: auto;
-  }
-
-  .integrantes {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.2rem;
-  }
-}
-
 .sidebar .item {
   margin-bottom: 0.5rem;
   color: var(--color-mint);
@@ -367,19 +322,6 @@ h3 {
   list-style-position: inside;
   color: var(--color-mint);
 }
-
-.pie-pagina {
-  background-color: var(--background-secondary);
-  margin-top: 4rem;
-  padding: 2.5rem 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  align-items: center;
-  text-align: center;
-  border-top: 3px solid var(--color-green);
-}
-
 @media (min-width: 1024px) {
   .perros-destacados {
     display: grid;
@@ -406,5 +348,45 @@ h3 {
 
   .sidebar {
     flex: 1;
+  }
+}
+@media (min-width: 768px) {
+  .barra-navegacion .contenedor {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .descripcion {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .descripcion>div {
+    flex: 1;
+  }
+
+  .descripcion img {
+    flex: 1;
+    width: 50%;
+    max-height: 350px;
+  }
+
+  .formulario .fila {
+    flex-direction: row;
+  }
+
+  .formulario .fila .grupo {
+    flex: 1;
+  }
+
+  #enviarButton {
+    width: auto;
+  }
+
+  .integrantes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
   }
 }
