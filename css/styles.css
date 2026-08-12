@@ -1,11 +1,11 @@
 :root {
-  --bg-main: #0B343E;
-  --bg-dark: #08252D;
+  --background-primary: #0B343E;
+  --background-secondary: #08252D;
   --color-secondary: #064C58;
   --color-cyan: #7FDEE2;
   --color-mint: #DFFBCA;
   --color-green: #74CD59;
-  
+
   --text-marca: "Fredericka the Great", serif;
   --text-title: "Expletus Sans", sans-serif;
   --text: "Bricolage Grotesque", sans-serif;
@@ -18,7 +18,7 @@
 }
 
 body {
-  background-color: var(--bg-main);
+  background-color: var(--background-primary);
   color: #E2F5EE;
   font-family: var(--text);
   line-height: 1.6;
@@ -33,14 +33,16 @@ img {
   display: block;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--text-title);
   color: var(--color-cyan);
   margin-bottom: 0.75rem;
 }
 
 .barra-navegacion {
-  background-color: var(--bg-dark);
+  background-color: var(--background-secondary);
   border-bottom: 2px solid var(--color-secondary);
   padding: 1rem;
   position: sticky;
@@ -66,8 +68,18 @@ h1, h2, h3 {
 }
 
 .icono-logo {
-  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--color-green);
+}
+
+.icono-logo .img-logo {
+  width: 50px;
+  height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  object-fit: contain;
 }
 
 .texto-logo {
@@ -118,7 +130,7 @@ h1, h2, h3 {
 
 .boton-adoptar {
   background-color: var(--color-green);
-  color: var(--bg-dark);
+  color: var(--background-secondary);
   border: none;
   padding: 0.6rem 1.3rem;
   border-radius: 20px;
@@ -151,7 +163,7 @@ h1, h2, h3 {
   gap: 2rem;
   align-items: center;
   margin-bottom: 3.5rem;
-  background-color: var(--bg-dark);
+  background-color: var(--background-secondary);
   padding: 2rem;
   border-radius: 16px;
   border: 1px solid var(--color-secondary);
@@ -185,15 +197,14 @@ h1, h2, h3 {
   font-size: 2.2rem;
 }
 
-.perros-destacados > p {
+.perros-destacados>p {
   color: var(--color-mint);
   margin-bottom: 1.5rem;
 }
 
-/* TARJETAS CON FONDO CLARO (Resaltan mucho más) */
 .tarjeta-perro {
   background-color: var(--color-mint);
-  color: var(--bg-dark);
+  color: var(--background-secondary);
   border-radius: 16px;
   padding: 1.25rem;
   margin: 1.5rem 0;
@@ -216,7 +227,7 @@ h1, h2, h3 {
 }
 
 .tarjeta-perro h3 {
-  color: var(--bg-dark);
+  color: var(--background-secondary);
   font-family: var(--text);
   font-weight: 800;
   font-size: 1.4rem;
@@ -227,7 +238,7 @@ h1, h2, h3 {
 }
 
 .beneficios {
-  background: linear-gradient(135deg, var(--color-secondary), var(--bg-dark));
+  background: linear-gradient(135deg, var(--color-secondary), var(--background-secondary));
   padding: 2.5rem;
   border-radius: 16px;
   border: 1px solid var(--color-cyan);
@@ -239,7 +250,7 @@ h1, h2, h3 {
 }
 
 .pie-pagina {
-  background-color: var(--bg-dark);
+  background-color: var(--background-secondary);
   margin-top: 4rem;
   padding: 2.5rem 1rem;
   display: flex;
@@ -269,6 +280,40 @@ h1, h2, h3 {
   font-size: 1.4rem;
 }
 
+.modal-content {
+  background-color: var(--bg-dark) !important;
+  color: var(--color-mint) !important;
+  border: 2px solid var(--color-secondary) !important;
+  border-radius: 16px !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid var(--color-secondary) !important;
+}
+
+.modal-footer {
+  border-top: 1px solid var(--color-secondary) !important;
+}
+
+.form-control,
+.form-select {
+  background-color: #ffffff !important;
+  border: 2px solid var(--color-secondary) !important;
+  border-radius: 8px !important;
+}
+
+.form-label {
+  color: var(--color-mint) !important;
+  font-family: var(--text) !important;
+}
+
+.btn-adopcion-submit {
+  background-color: var(--color-green) !important;
+  color: var(--bg-dark) !important;
+  font-family: var(--text) !important;
+  font-weight: bold !important;
+}
+
 @media (min-width: 768px) {
   .barra-navegacion .contenedor {
     flex-direction: row;
@@ -280,14 +325,17 @@ h1, h2, h3 {
     justify-content: space-between;
   }
 
-  .descripcion > div {
-    flex: 1; /* El texto toma el 50% */
+  .descripcion>div {
+    flex: 1;
+    /* El texto toma el 50% */
   }
 
   .descripcion img {
-    flex: 1; /* La imagen toma el otro 50% */
+    flex: 1;
+    /* La imagen toma el otro 50% */
     width: 50%;
-    max-height: 350px; /* Mantiene la imagen proporcionada y alineada */
+    max-height: 350px;
+    /* Mantiene la imagen proporcionada y alineada */
   }
 
   .formulario .fila {
@@ -321,7 +369,7 @@ h1, h2, h3 {
 }
 
 .pie-pagina {
-  background-color: var(--bg-dark);
+  background-color: var(--background-secondary);
   margin-top: 4rem;
   padding: 2.5rem 1rem;
   display: flex;
@@ -340,7 +388,7 @@ h1, h2, h3 {
   }
 
   .perros-destacados h2,
-  .perros-destacados > p {
+  .perros-destacados>p {
     grid-column: 1 / -1;
   }
 
