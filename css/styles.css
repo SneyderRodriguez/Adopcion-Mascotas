@@ -1,0 +1,362 @@
+:root {
+  --bg-main: #0B343E;
+  --bg-dark: #08252D;
+  --color-secondary: #064C58;
+  --color-cyan: #7FDEE2;
+  --color-mint: #DFFBCA;
+  --color-green: #74CD59;
+  
+  --text-marca: "Fredericka the Great", serif;
+  --text-title: "Expletus Sans", sans-serif;
+  --text: "Bricolage Grotesque", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: #E2F5EE;
+  font-family: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3 {
+  font-family: var(--text-title);
+  color: var(--color-cyan);
+  margin-bottom: 0.75rem;
+}
+
+.barra-navegacion {
+  background-color: var(--bg-dark);
+  border-bottom: 2px solid var(--color-secondary);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.barra-navegacion .contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.icono-logo {
+  font-size: 2rem;
+  color: var(--color-green);
+}
+
+.texto-logo {
+  color: var(--color-cyan);
+  font-family: var(--text-marca);
+  font-size: 1.6rem;
+  display: block;
+}
+
+.texto-resaltado {
+  color: var(--color-green);
+}
+
+.subtitulo-logo {
+  font-size: 0.75rem;
+  color: var(--color-mint);
+  display: block;
+}
+
+.menu-navegacion {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-navegacion .enlace {
+  background: transparent;
+  border: 1px solid transparent;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--text);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.menu-navegacion .enlace:hover,
+.menu-navegacion .enlace.activo {
+  background-color: var(--color-secondary);
+  color: var(--color-mint);
+  border-color: var(--color-cyan);
+}
+
+.boton-adoptar {
+  background-color: var(--color-green);
+  color: var(--bg-dark);
+  border: none;
+  padding: 0.6rem 1.3rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  font-family: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 10px rgba(116, 205, 89, 0.3);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.boton-adoptar:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.seccion-inicio {
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+.descripcion {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+  background-color: var(--bg-dark);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--color-secondary);
+}
+
+.descripcion h1 {
+  font-size: 2.8rem;
+}
+
+.descripcion p {
+  color: var(--color-mint);
+  font-size: 1.1rem;
+}
+
+.descripcion img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  border: 2px solid var(--color-cyan);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.perros-destacados {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.perros-destacados h2 {
+  font-size: 2.2rem;
+}
+
+.perros-destacados > p {
+  color: var(--color-mint);
+  margin-bottom: 1.5rem;
+}
+
+/* TARJETAS CON FONDO CLARO (Resaltan mucho más) */
+.tarjeta-perro {
+  background-color: var(--color-mint);
+  color: var(--bg-dark);
+  border-radius: 16px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  text-align: left;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-perro:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(127, 222, 226, 0.2);
+}
+
+.tarjeta-perro img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.tarjeta-perro h3 {
+  color: var(--bg-dark);
+  font-family: var(--text);
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+
+.tarjeta-perro p {
+  color: #1a3c40;
+}
+
+.beneficios {
+  background: linear-gradient(135deg, var(--color-secondary), var(--bg-dark));
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--color-cyan);
+  text-align: center;
+}
+
+.beneficios h2 {
+  color: var(--color-green);
+}
+
+.pie-pagina {
+  background-color: var(--bg-dark);
+  margin-top: 4rem;
+  padding: 2.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+  border-top: 3px solid var(--color-green);
+}
+
+.integrantes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--color-mint);
+}
+
+.pie-correo {
+  font-weight: bold;
+  color: var(--color-cyan);
+}
+
+.proyecto-nombre {
+  font-family: var(--text-marca);
+  color: var(--color-green);
+  font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  .barra-navegacion .contenedor {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .descripcion {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .descripcion > div {
+    flex: 1; /* El texto toma el 50% */
+  }
+
+  .descripcion img {
+    flex: 1; /* La imagen toma el otro 50% */
+    width: 50%;
+    max-height: 350px; /* Mantiene la imagen proporcionada y alineada */
+  }
+
+  .formulario .fila {
+    flex-direction: row;
+  }
+
+  .formulario .fila .grupo {
+    flex: 1;
+  }
+
+  #enviarButton {
+    width: auto;
+  }
+
+  .integrantes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+}
+
+.sidebar .item {
+  margin-bottom: 0.5rem;
+  color: var(--color-mint);
+}
+
+.sidebar ul {
+  list-style-position: inside;
+  color: var(--color-mint);
+}
+
+.pie-pagina {
+  background-color: var(--bg-dark);
+  margin-top: 4rem;
+  padding: 2.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+  border-top: 3px solid var(--color-green);
+}
+
+@media (min-width: 1024px) {
+  .perros-destacados {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .perros-destacados h2,
+  .perros-destacados > p {
+    grid-column: 1 / -1;
+  }
+
+  .tarjeta-perro {
+    margin: 0;
+  }
+
+  .contenedor-contacto {
+    flex-direction: row;
+  }
+
+  .formulario {
+    flex: 2;
+  }
+
+  .sidebar {
+    flex: 1;
+  }
+}
